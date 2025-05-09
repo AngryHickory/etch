@@ -1,8 +1,24 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: maroon;
+}
+
+h1 {
+    color: goldenrod;
+    font-family: Chalkduster, fantasy;
+    font-size: xx-large;
+}
+
 #gridContainer {
     display: flex;
     flex-direction: column;
-    width: 600px;
-    height: 600px;
+    width: 800px;
+    height: 800px;
     border: 1px solid black;
 }
 
@@ -15,4 +31,5 @@
     flex: 1;
     border: 1px solid lightgray;
     box-sizing: border-box;
+    background-color: grey;
 }
