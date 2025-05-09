@@ -29,7 +29,12 @@ h1 {
 
 .grid-cell {
     flex: 1;
-    border: 1px solid lightgray;
+    border: 1px solid lightgrey;
     box-sizing: border-box;
     background-color: grey;
+}
+
+
+.grid-cell.hovered {
+    background-color: black;
 }

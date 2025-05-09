@@ -1,5 +1,5 @@
-document.addEventListener("DOMContentLoaded", function() {
-    let gridContainer = document.getElementById("gridContainer");
+document.addEventListener('DOMContentLoaded', function() {
+    let gridContainer = document.getElementById('gridContainer');
     console.log(gridContainer);
 });
 
@@ -18,10 +18,21 @@ function createGrid(rows, cols) { // this line defines a function named createGr
       cell.classList.add('grid-cell'); // Add class for styling
 
       row.appendChild(cell); // this line appends the cell element to the row element. this makes the cell the child of the row in HTML. 
+
+      cell.addEventListener('mouseenter', function(event) {
+      console.log("hovering")
+      cell.classList.add('hovered');
+});
     }
 
     gridContainer.appendChild(row); // this appends the row to the grid container once the inner loop is finished adding cells. 
   }
 }
 
-createGrid(16, 16); // this line calls the function with two arguments: rows, columns
+createGrid(100, 100); // this line calls the function with two arguments: rows, columns
+
+const cell = document.querySelector('.grid-cell');
+cell.addEventListener('mouseenter', function(event) {
+  console.log("hovering")
+  cell.classList.add('hovered');
+});
