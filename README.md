@@ -7,8 +7,10 @@ Logic:
 
 
 createGrid function:
-1 Get a reference to the gridContainer element in the HTML.
-2 Use nested loops to iterate through the desired number of rows and columns.
-3 For each row and column combination, creating a new div element (a cell).
-4 Add a CSS class to the cell for styling.
-5 Add the cell to the gridContainer element, making it visible on the page.
+Getting a reference to the main container element in the HTML.
+Looping through the desired number of rows.
+For each row, creating a row element and adding the grid-row class.
+Looping through the desired number of columns.
+For each column, creating a cell element and adding the grid-cell class.
+Adding the cell to the current row.
+After creating all the cells for a row, adding the row to the main container.
