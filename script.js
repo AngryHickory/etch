@@ -34,7 +34,7 @@ function createGrid(rows, cols) { // this line defines a function named createGr
   }
 }
 
-createGrid(100, 100); // this line calls the function with two arguments: rows, columns
+createGrid(16, 16); // this line calls the function with two arguments: rows, columns
 
 const cell = document.querySelector('.grid-cell');
 cell.addEventListener('mouseenter', function(event) {

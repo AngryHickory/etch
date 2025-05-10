@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Luminari';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Luminari'), url('../fonts/Luminari-Regular.woff') format('woff');
+    }
+
 body {
     display: flex;
     justify-content: center;
@@ -10,9 +17,9 @@ body {
     background-color: maroon;
 }
 
-h1 {
+.header {
     color: goldenrod;
-    font-family: Chalkduster, fantasy;
+    font-family: "Luminari", cursive;
     font-size: xx-large;
 }
 
