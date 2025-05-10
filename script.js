@@ -20,7 +20,6 @@ function createGrid(rows, cols) { // this line defines a function named createGr
       row.appendChild(cell); // this line appends the cell element to the row element. this makes the cell the child of the row in HTML. 
 
     cell.addEventListener('mouseenter', function(event) {
-      console.log("hovering")
       cell.classList.add('hovered');
     });
 
