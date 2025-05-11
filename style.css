@@ -34,7 +34,7 @@ button {
 
 button:active {
   background-color: brown;
-  transform: translateY(8px);
+  transform: translateY(px);
 }
 
 .header {
@@ -64,7 +64,7 @@ button:active {
 .grid-cell {
     flex: 1;
     flex-grow: 1;
-    border: 1px solid grey;
+    border: 0;
     box-sizing: border-box;
     background-color: grey;
 }

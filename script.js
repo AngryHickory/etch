@@ -22,10 +22,12 @@ function createGrid(rows, cols) { // this line defines a function named createGr
 
     cell.addEventListener('mouseenter', function(event) {
       cell.classList.add('hovered');
+      updateOpacity(cell);
     });
 
     cell.addEventListener('touchstart', function(event) {
       cell.classList.add('hovered');
+      updateOpacity(cell);
     });
 
     }
@@ -35,6 +37,17 @@ function createGrid(rows, cols) { // this line defines a function named createGr
 }
 
 createGrid(16, 16); // this line calls the function with two arguments: rows, columns
+
+function updateOpacity(cell) {
+  let currentOpacity = parseFloat(cell.style.opacity) || 0.1;
+
+  currentOpacity += 0.1;
+  if (currentOpacity > 1) {
+    currentOpacity = 1;
+  }
+
+  cell.style.opacity = currentOpacity;
+}
 
 gridButton.addEventListener('click', function() {
   const inputValue = prompt("Enter a number for grid size:");
