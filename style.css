@@ -22,9 +22,19 @@ h1 {
 }
 
 button {
+    max-height: 2.5vw;
     background-color: brown;
     border: 0;
-    padding: 1vw;
+    padding: 0.5vw 1vw;
+    color: goldenrod;
+    font-family: "Luminari", cursive;
+    font-size: large;
+    border-radius: 10px;
+}
+
+button:active {
+  background-color: brown;
+  transform: translateY(8px);
 }
 
 .header {
