@@ -3,11 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log(gridContainer);
 });
 
-const numRows = 16;
-const numCols = 16;
+const gridButton = document.getElementById('gridButton');
+const resetButton = document.getElementById('reset');
 
 function createGrid(rows, cols) { // this line defines a function named createGrid - it takes the parameters rows and cols
   const gridContainer = document.getElementById('gridContainer'); // this line references the html element with the ID gridContainer
+
+  gridContainer.innerHTML = '';
 
   for (let i = 0; i < rows; i++) { // this is the outer for loop for the rows
     const row = document.createElement('div'); // this line creates a new div element inside the outer loop, it will be a row in the grid.
@@ -34,6 +36,26 @@ function createGrid(rows, cols) { // this line defines a function named createGr
 }
 
 createGrid(16, 16); // this line calls the function with two arguments: rows, columns
+
+gridButton.addEventListener('click', function() {
+  const inputValue = prompt("Enter a number for grid size:");
+
+  if (inputValue !== null) {
+    const num = parseInt(inputValue);
+
+    if (!isNaN(num) && num > 0 && num <= 100) {
+      createGrid(num, num);
+    } else {
+        alert("Please enter a number between 1-100");
+    }
+  } else {
+    alert("You must enter a number.")
+  }
+});
+
+resetButton.addEventListener('click', () => {
+  location.reload();
+})
 
 const cell = document.querySelector('.grid-cell');
 cell.addEventListener('mouseenter', function(event) {
