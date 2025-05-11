@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     let gridContainer = document.getElementById('gridContainer');
-    console.log(gridContainer);
 });
 
 const gridButton = document.getElementById('gridButton');
@@ -56,9 +55,3 @@ gridButton.addEventListener('click', function() {
 resetButton.addEventListener('click', () => {
   location.reload();
 })
-
-const cell = document.querySelector('.grid-cell');
-cell.addEventListener('mouseenter', function(event) {
-  console.log("hovering")
-  cell.classList.add('hovered');
-});
